@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      NewsApp
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let article of data?.articles">
+    <img [src]="article.urlToImage"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{article.title}}
+        </ion-card-title>
+      <p>
+        {{article.description}}
+        <a fill="outline" href="{{article.url}}" medium>Baca Selengkapnya</a>
+      </p>
+      <p>
+        {{article.publishedAt}}
+      </p>
+      <p>
+        {{article.source.name}}
+      </p>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
